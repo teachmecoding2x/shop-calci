@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="calculator-container">
+    <h1>Shopping Calculator</h1>
+
+    <!-- Product Category Dropdown -->
+    <label for="category">Select Category:</label>
+    <select id="category" onchange="updateSubcategories()">
+      <option value="">Select a Category</option>
+      <option value="electronics">Electronics</option>
+      <option value="fashion">Fashion</option>
+      <option value="home">Home & Kitchen</option>
+      <option value="beauty">Beauty & Personal Care</option>
+      <option value="books">Books</option>
+    </select>
+
+    <!-- Subcategory Dropdown (dynamic) -->
+    <label for="subcategory">Select Subcategory:</label>
+    <select id="subcategory">
+      <option value="">Select a Subcategory</option>
+    </select>
+
+    <!-- Store Dropdown -->
+    <label for="store">Select Store:</label>
+    <select id="store">
+      <option value="">Select a Store</option>
+      <option value="amazon">Amazon</option>
+      <option value="walmart">Walmart</option>
+      <option value="ebay">eBay</option>
+      <option value="torrid">Torrid</option>
+      <option value="asos">ASOS</option>
+      <option value="zara">Zara</option>
+    </select>
+
+    <!-- Price Range Filter -->
+    <label for="price-range">Price Range:</label>
+    <input type="range" id="price-range" min="0" max="1000" value="500">
+    <span id="price-value">$500</span>
+
+    <!-- Ratings Filter -->
+    <label for="ratings">Ratings:</label>
+    <select id="ratings">
+      <option value="1">1 Star & Above</option>
+      <option value="2">2 Stars & Above</option>
+      <option value="3">3 Stars & Above</option>
+      <option value="4">4 Stars & Above</option>
+    </select>
+
+    <!-- Prime Eligible Toggle -->
+    <label for="prime">Prime Eligible:</label>
+    <input type="checkbox" id="prime">
+
+    <!-- Show Filtered Products Button -->
+    <button onclick="showFilteredProducts()">Show Products</button>
+
+    <!-- Filtered Results Display -->
+    <div id="result"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
